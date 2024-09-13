@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>CSS AMOR DANIEL</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="heart" id="heart"></div>
+        <h1 id="mainText">Para mi todo ❤</h1>
+        <div id="bottomText" class="text hidden">
+            <p>Hola Bri, hoy es viernes 13. Quería llevarte flores y salir a comer algo, pero sé que no podremos salir hoy porque estarás muy ocupada y yo regresaré tarde de Lima. Aun así, hice esto para que sepas que eres especial para mí. Eres una chica que, fuera de todos los problemas que tuvimos, siempre me sacaste una sonrisa. Podremos tener altos y bajos, pero siempre la pasamos juntos. Eres una chica muy bonita, hermosa, preciosa, que siempre que veo, me enamoro más y más. Realmente no descarto tener todas esas cosas bonitas que alguna vez dijimos. Me alegro de conocerte y espero que hoy puedas pasarlo bien. Te quiero mucho y gracias por estar en mi vida. Realmente vales mucho para mí, que se te quede claro. Siempre tendrás mi apoyo y siempre tendrás a alguien que, a pesar de todo, estará para ti. Te adoro, mi niña.</p>
+        </div>
+        <button id="changeButton">Haz clic aquí</button>
+
+        <!-- Aquí va el video de YouTube -->
+        <div id="videoContainer" class="hidden">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ubq19HWOYo4" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <script>
+            document.getElementById('changeButton').addEventListener('click', function() {
+                // Reducir el corazón
+                const heart = document.getElementById('heart');
+                heart.style.transform = 'scale(0.5) rotate(-45deg)';
+                
+                // Mostrar el texto de abajo
+                document.getElementById('bottomText').classList.remove('hidden');
+                
+                // Esconder el texto principal
+                document.getElementById('mainText').classList.add('hidden');
+                
+                // Esconder el botón
+                document.getElementById('changeButton').style.display = 'none';
+                
+                // Mostrar el video
+                document.getElementById('videoContainer').classList.remove('hidden');
+            });
+        </script>
+    </body>
+</html>
